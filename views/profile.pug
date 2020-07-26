@@ -1,0 +1,59 @@
+doctype html
+head
+    title Table V04
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    // ===============================================================================================
+    link(rel='icon' type='image/png' href='/images/icons/favicon.ico')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='/vendors/bootstrap/css/bootstrap.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='/vendors/animate/animate.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='/vendors/select2/select2.min.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='/vendors/perfect-scrollbar/perfect-scrollbar.css')
+    // ===============================================================================================
+    link(rel='stylesheet' type='text/css' href='/stylesheets/util.css')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/main.css')
+    // ===============================================================================================
+.limiter
+    .container-table100
+        .wrap-table100
+            .table100.ver1.m-b-110
+                .table100-head
+                    table
+                        thead
+                            tr.row100.head
+                                th.cell100.column1 Text
+                                th.cell100.column2 Date
+                                th.cell100.column3 senderPhone
+                .table100-body.js-pscroll
+                    table
+                        tbody
+                            each item in data
+                                tr.row100.body
+                                    td.cell100.column1= item.text
+                                    td.cell100.column2= item.date
+                                    td.cell100.column3= item.senderPhone
+
+// ===============================================================================================
+script(src='vendors/jquery/jquery-3.2.1.min.js')
+// ===============================================================================================
+script(src='vendors/bootstrap/js/popper.js')
+script(src='vendors/bootstrap/js/bootstrap.min.js')
+// ===============================================================================================
+script(src='vendors/select2/select2.min.js')
+// ===============================================================================================
+script(src='vendors/perfect-scrollbar/perfect-scrollbar.min.js')
+script.
+    $('.js-pscroll').each(function () {
+        var ps = new PerfectScrollbar(this);
+        $(window).on('resize', function () {
+            ps.update();
+        })
+    });
+// ===============================================================================================
+script(src='js/main.js')

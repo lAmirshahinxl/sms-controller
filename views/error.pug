@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        title پیدا نشد!
+
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+        // Favicon
+        link(rel='shortcut icon', href='assets/media/image/favicon.png')
+        // Plugin styles
+        link(rel='stylesheet', href='vendors/bundle.css', type='text/css')
+        // App styles
+        link(rel='stylesheet', href='assets/css/app.min.css', type='text/css')
+    body.error-page.bg-white
+        div
+            h4.mb-0.text-muted.font-weight-normal اوه نه! صفحه موردنظر شما پیدا نشد!
+            div
+                span.error-page-item.font-weight-bold 4
+                span.error-page-item.font-weight-bold 0
+                span.error-page-item.font-weight-bold 4
+            a.btn.btn-outline-light.btn-lg(href='#') برگشت به خانه
+        // Plugin scripts
+        script(src='vendors/bundle.js')
+        // App scripts
+        script(src='assets/js/app.min.js')
